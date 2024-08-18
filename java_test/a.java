@@ -14,6 +14,6 @@ public class a {
         sb.append(num);
         bw.write(sb.reverse().toString());
         bw.flush();
-        bw.close();    }
-
+        bw.close();
+    }
 }
