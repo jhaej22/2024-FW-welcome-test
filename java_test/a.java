@@ -1,10 +1,19 @@
 package java_test;
 
+import java.io.*;
+
 public class a {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
 
-        // 이 부분에 code를 작성해주세요!
+        int num = Integer.parseInt(br.readLine());
+        br.close();
 
-    }
+        sb.append(num);
+        bw.write(sb.reverse().toString());
+        bw.flush();
+        bw.close();    }
 
 }
