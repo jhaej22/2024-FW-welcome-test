@@ -1,10 +1,24 @@
 package java_test;
 
+import java.io.*;
+
 public class d {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int num;
+        int sum = 0;
 
-        // 이 부분에 code를 작성해주세요!
-
+        while (true) {
+            num = Integer.parseInt(br.readLine());
+            if (num <= 0) {
+                System.out.println("X");
+            } else {
+                for (int i = 1; i <= num; i++) {
+                    sum += i;
+                }
+                break;
+            }
+        }
+        System.out.println(sum);
     }
-
 }
